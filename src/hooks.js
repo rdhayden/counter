@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 
+// custom hooks are just functions that start with "use"
+// and can use other hooks inside them
+// they can be used to encapsulate logic that is reusable
+// and can be shared across components
+
 export const useQuantity = (initialVal) => {
   const [quantity, setQuantity] = useState(initialVal);
 
