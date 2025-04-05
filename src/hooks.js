@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 
-// custom hooks are just functions that start with "use"
-// and can use other hooks inside them
-// they can be used to encapsulate logic that is reusable
-// and can be shared across components
+// custom hooks are just functions that start with "use" and can use other hooks inside them
+// Rules for hooks:
+// 1. Only call hooks at the top level (not inside loops, conditions, or nested functions)
+//    The only exception is a custom hook, and that's why you must use the "use" prefix
+//    to indicate that the function is a custom hook
+// 2. You cannot call hooks after a return statement
 
 export const useQuantity = (initialVal) => {
   const [quantity, setQuantity] = useState(initialVal);
